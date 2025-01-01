@@ -1,3 +1,3 @@
 # Writeups
 
-- [ROP Emporium]([/rop_emporium)
+- [ROP Emporium](/rop_emporium)
