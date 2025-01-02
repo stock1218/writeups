@@ -2,7 +2,4 @@ header_pages:
   - README.md
 
 name: writeups
-
 theme: minima
-minima:
-  skin: solarized
