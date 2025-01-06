@@ -4,7 +4,7 @@ This challenge has the same basic elements as the previous with some minor chang
 
 From reading the information on the website and running the program, we have the following information:
 - The program will read 52 bytes of data into a 32 byte buffer
-- There is a `usefulFunction` function that will put `usefulString` (containing `/bin/ls`) into `edi` before calling `system()`. In other words, putting `/bin/ls` into `edi` before calling `system()` creates the call: `system('/bin/ls`')`, which will print the contents of the current directory. We cannot just jump to this function since it will just execute `ls`, so we instead want to use a ROP gadget to change `edi` before calling `system()`. Conviniently, there is a `usefulString` in the binary that contains `/bin/cat flag.txt`, which is what we want to execute to print the flag.
+- There is a `usefulFunction` function that will put `usefulString` (containing `/bin/ls`) into `edi` before calling `system()`. In other words, putting `/bin/ls` into `edi` before calling `system()` creates the call: `system('/bin/ls')`, which will print the contents of the current directory. We cannot just jump to this function since it will just execute `ls`, so we instead want to use a ROP gadget to change `edi` before calling `system()`. Conviniently, there is a `usefulString` in the binary that contains `/bin/cat flag.txt`, which is what we want to execute to print the flag.
 
 Note that I found this information pretty quickly using `nm split` to print out all of the symbols (which informed me about `usefulFunction` and `usefulString`). I read the assembly to determine what was going on in that function in gdb via `disass usefulFunction`.
 
