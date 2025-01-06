@@ -2,4 +2,4 @@ header_pages:
   - README.md
 
 name: writeups
-theme: minima
+remote-theme: jekyll/minima
