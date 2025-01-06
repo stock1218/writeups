@@ -5,3 +5,6 @@ plugins:
 
 minima:
   skin: solarized-dark
+
+header_pages:
+  - README.md
