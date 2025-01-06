@@ -2,7 +2,10 @@ header_pages:
   - README.md
 
 name: writeups
+
 remote-theme: jekyll/minima
+plugins:
+  - jekyll-remote-theme
 
 minima:
   skin: dark
